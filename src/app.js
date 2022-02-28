@@ -6,15 +6,18 @@ const alunoController = require('./routes/Aluno')
 const disciplinaController = require('./routes/Disciplina')
 const professorController = require('./routes/Professor')
 const turmaController = require('./routes/Turma')
+const db = require('./database/database')
 
 app.listen(port, () => {
     console.log('Servidor inciado na porta ' +  port);
 });
 
-app.get('/alunos', alunoController.findAll);
-app.get('/disciplinas', disciplinaController.findAll);
-app.get('/professores', professorController.findAll);
-app.get('/turmas', turmaController.findAll);
+db.createTables();
+
+app.get('/alunos', alunoController.buscarTodos);
+app.get('/disciplinas', disciplinaController.buscarTodos);
+app.get('/professores', professorController.buscarTodos);
+app.get('/turmas', turmaController.buscarTodos);
 
 app.post('/alunos', alunoController.inserir);
 app.post('/disciplinas', disciplinaController.inserir);
@@ -24,7 +27,6 @@ app.post('/turmas', turmaController.inserir);
 app.put('/alunos/:id', alunoController.atualizar);
 app.put('/disciplinas/:id', disciplinaController.atualizar);
 app.put('/professores/:id', professorController.atualizar);
-app.put('/turmas/:id', turmaController.atualizar);
 
 app.delete('/alunos/:id', alunoController.deletar);
 app.delete('/disciplinas/:id', disciplinaController.deletar);
