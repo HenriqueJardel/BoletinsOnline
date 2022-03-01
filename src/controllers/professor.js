@@ -1,13 +1,19 @@
 const db = require('../database/database');
 const sql = require('../database/sql')
 
+async function buscarProfessorPeloId(req, res) { 
+    const professor = await db.find(sql.buscarProfessorPeloId + "" + req.params.id);
+    return res.json(professor);
+}
+
 async function buscarTodos(res, res) {
-    const professores = await db.findAll(sql.buscarTodosProfessores);
+    const professores = await db.find(sql.buscarTodosProfessores);
     return res.json(professores);
 }
 
 async function inserir(req, res) {
-    await db.insert(sql.inserirProfessor);
+    
+    await db.insert(sql.inserirProfessor + "('" + req.body.nome + "', '" + req.body.dt_admissao + "', '" + req.body.formacao + "', '" + req.body.area_atuacao + "')");
 
     return res.json({
         status: 'sucesso',
@@ -28,4 +34,4 @@ async function deletar(req, res) {
     });
 }
 
-module.exports = { buscarTodos, inserir, atualizar, deletar } 
+module.exports = { buscarProfessorPeloId ,buscarTodos, inserir, atualizar, deletar } 

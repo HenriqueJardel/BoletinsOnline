@@ -2,12 +2,13 @@ const db = require('../database/database');
 const sql = require('../database/sql')
 
 async function buscarTodos(res, res) {
-    const turmas = await db.findAll(sql.buscarTodasTurmas);
+    const turmas = await db.find(sql.buscarTodasTurmas);
     return res.json(turmas);
 }
 
 async function inserir(req, res) {
-    await db.insert(sql.inserirTurma);
+    
+    await db.insert(sql.inserirTurma + "('" + req.body.ano_turma + "')");
 
     return res.json({
         status: 'sucesso',

@@ -1,8 +1,13 @@
 const db = require('../database/database');
 const sql = require('../database/sql');
 
+async function buscarDisciplinaPorId(req, res) {
+    const disciplina = await db.find(sql.buscarDisciplinaPeloId + "" + req.params.id);
+    return res.json(disciplina);
+}
+
 async function buscarTodos(req, res) {
-    const disciplinas = await db.findAll(sql.buscarTodasDisciplinas);
+    const disciplinas = await db.find(sql.buscarTodasDisciplinas);
     return res.json(disciplinas);
 }
 
@@ -28,4 +33,4 @@ async function deletar(req, res) {
     });
 }
 
-module.exports = { buscarTodos, inserir, atualizar, deletar }
+module.exports = { buscarDisciplinaPorId, buscarTodos, inserir, atualizar, deletar }
