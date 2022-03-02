@@ -2,7 +2,7 @@ const db = require('../database/database');
 const sql = require('../database/sql');
 
 async function buscarBoletimPeloId(req, res) {
-    const boletim = await db.find(sql.BuscarBoletimPeloId + "" + req.params.id + ")");
+    const boletim = await db.find(sql.buscarBoletimPeloId + "" + req.params.id + ")");
     return res.json(boletim);
 }
 

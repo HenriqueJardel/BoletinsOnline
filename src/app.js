@@ -29,8 +29,6 @@ app.get('/boletins', boletimController.buscarTodos);
 app.get('/boletins/:id', boletimController.buscarBoletimPeloId);
 app.get('/turmas', turmaController.buscarTodos);
 
-
-
 app.post('/alunos', alunoController.inserir);
 app.post('/disciplinas', disciplinaController.inserir);
 app.post('/professores', professorController.inserir);

@@ -12,7 +12,8 @@ async function buscarTodos(req, res) {
 }
 
 async function inserir(req, res) {
-    await db.insert(sql.inserirDisciplina);
+    
+    await db.insert(sql.inserirDisciplina + "('" + req.body.codigo_disciplina + "', '" + req.body.nome + "', " + req.body.professor_id + ")");
 
     return res.json({
         status: 'sucesso',
