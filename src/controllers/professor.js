@@ -1,5 +1,6 @@
 const db = require('../database/database');
-const sql = require('../database/sql')
+const sql = require('./util/sql');
+const validator = require('./util/validators');
 
 async function buscarProfessorPeloId(req, res) { 
     const professor = await db.find(sql.buscarProfessorPeloId + "" + req.params.id);
@@ -12,13 +13,26 @@ async function buscarTodos(res, res) {
 }
 
 async function inserir(req, res) {
-    
-    await db.insert(sql.inserirProfessor + "('" + req.body.nome + "', '" + req.body.dt_admissao + "', '" + req.body.formacao + "', '" + req.body.area_atuacao + "')");
+    try {
+        
+        validator.existsOrError(req.body.nome, "Dados incorretos!");
+        validator.existsOrError(req.body.dt_admissao, "Dados incorretos!");
+        validator.existsOrError(req.body.formacao, "Dados incorretos!");
+        validator.existsOrError(req.body.area_atuacao, "Dados incorretos!");
 
-    return res.json({
-        status: 'sucesso',
-        msg: 'inserido com sucesso!'
-    });
+        await db.insert(sql.inserirProfessor + "('" + req.body.nome + "', '" + req.body.dt_admissao + "', '" + req.body.formacao + "', '" + req.body.area_atuacao + "')");
+
+        return res.json({
+            status: 'sucesso',
+            msg: 'inserido com sucesso!'
+        });
+    } catch(err) {
+        return res.status(400).json({
+            status: "Erro de validação",
+            message: err
+        });
+    }
+    
 }
 
 async function atualizar(req, res) {

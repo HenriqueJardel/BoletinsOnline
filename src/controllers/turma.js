@@ -1,5 +1,6 @@
 const db = require('../database/database');
-const sql = require('../database/sql')
+const sql = require('./util/sql');
+const validator = require('./util/validators');
 
 async function buscarTodos(res, res) {
     const turmas = await db.find(sql.buscarTodasTurmas);
@@ -7,13 +8,24 @@ async function buscarTodos(res, res) {
 }
 
 async function inserir(req, res) {
-    
-    await db.insert(sql.inserirTurma + "('" + req.body.ano_turma + "')");
+    try {
+        
+        validator.existsOrError(req.body.ano_turma, "Dados incorretos!");
 
-    return res.json({
-        status: 'sucesso',
-        msg: 'inserido com sucesso!'
-    });
+        await db.insert(sql.inserirTurma + "('" + req.body.ano_turma + "')");
+
+        return res.json({
+            status: 'sucesso',
+            msg: 'inserido com sucesso!'
+        });
+    
+    } catch(err) {
+        return res.status(400).json({
+            status: "Erro de validação",
+            message: err
+        });
+    }
+   
 }
 
 async function deletar(req, res) {
