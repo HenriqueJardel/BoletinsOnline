@@ -1,0 +1,424 @@
+{
+ 	"area_metros": "100",
+ 	"status": "vende-se",
+ 	"data_registro": "2020-09-24",
+ 	"rua": "Fulado de beltrano",
+ 	"bairro": "Beltrano",
+ 	"numero": 1250,
+ 	"cep": "79023000",
+ 	"cidade": "Campo Grande",
+ 	"estado": "Mato Grosso do Sul",
+ 	"tipo": "casa",
+ 	"imovel": {
+ 		"imovel_id": null,
+ 		"qt_quartos": 1,
+ 		"qt_suites": 1,
+ 		"qt_sala_estar": 0,
+ 		"qt_sala_jantar": 1,
+ 		"vagas_garagem": 1,
+ 		"possui_armario": 0,
+ 		"descricao" : "Mas um imóvel no centro oeste do brasil"
+ 	},
+	"propietarios": ["05673201117"]
+}
+
+{
+ 	"area_metros": "100",
+ 	"status": "vende-se",
+ 	"data_registro": "2020-09-24",
+ 	"rua": "Marechal teodoro",
+ 	"bairro": "Monte castelo",
+ 	"numero": 154,
+ 	"cep": "79023123",
+ 	"cidade": "Campo Grande",
+ 	"estado": "Mato Grosso",
+ 	"tipo": "apartamento",
+ 	"imovel": {
+ 		"imovel_id": null,
+ 		"qt_quartos": 1,
+ 		"qt_suites": 1,
+ 		"qt_sala_estar": 0,
+ 		"qt_sala_jantar": 1,
+ 		"vagas_garagem": 1,
+ 		"possui_armario": 0,
+ 		"andar": 12,
+ 		"valor_condominio": 250,
+ 		"possui_portaria": 1,
+		"descricao" : "Mas um imóvel no centro oeste do brasil"
+ 	},
+	"propietarios": ["05673201117"]
+}
+
+{
+ 	"area_metros": "100",
+ 	"status": "aluga-se",
+ 	"data_registro": "2020-09-24",
+ 	"rua": "jacinto ba",
+ 	"bairro": "tche",
+ 	"numero": 105,
+ 	"cep": "1111",
+ 	"cidade": "Cascavel",
+ 	"estado": "Paraná",
+ 	"tipo": "comercial",
+ 	"imovel": {
+ 		"imovel_id": null,
+ 		"qt_banheiros": 1,
+ 		"qt_comodos": 2,
+		"descricao" : "Mas um imóvel no sul do brasil"
+ 	},
+	"propietarios": ["05673201118"]
+}
+
+{
+ 	"area_metros": "250",
+ 	"status": "vende-se",
+ 	"data_registro": "2020-09-24",
+ 	"rua": "Belém de sá",
+ 	"bairro": "Caranguejal",
+ 	"numero": 0,
+ 	"cep": "81810555",
+ 	"cidade": "Belém",
+ 	"estado": "Pará",
+ 	"tipo": "terreno",
+ 	"imovel": {
+ 		"imovel_id": null,
+ 		"largura": 100,
+ 		"comprimento": 2,
+ 		"possui_aclive": 0,
+ 		"possui_declive" : 1,
+		"descricao" : "Terreno grande no norte do brasil"
+ 	},
+	"propietarios": ["05673201119"]
+}
+
+
+---
+
+
+{
+ 	"area_metros": "100",
+ 	"status": "aluga-se",
+ 	"data_registro": "2020-09-24",
+ 	"rua": "Serjão berranteiro",
+ 	"bairro": "Uai",
+ 	"numero": 0,
+ 	"cep": "55093154",
+ 	"cidade": "Cuiabá",
+ 	"estado": "Mato Grosso",
+ 	"tipo": "casa",
+ 	"imovel": {
+ 		"imovel_id": null,
+ 		"qt_quartos": 1,
+ 		"qt_suites": 1,
+ 		"qt_sala_estar": 0,
+ 		"qt_sala_jantar": 1,
+ 		"vagas_garagem": 1,
+ 		"possui_armario": 0,
+ 		"descricao" : "Mas um imóvel no centro oeste do brasil"
+ 	},,
+	"propietarios": ["05673201118"]
+}
+
+{
+ 	"area_metros": "100",
+ 	"status": "aluga-se",
+ 	"data_registro": "2020-09-24",
+ 	"rua": "Marechal teodoro",
+ 	"bairro": "Monte castelo",
+ 	"numero": 55,
+ 	"cep": "79023123",
+ 	"cidade": "Sinop",
+ 	"estado": "Mato Grosso",
+ 	"tipo": "apartamento",
+ 	"imovel": {
+ 		"imovel_id": null,
+ 		"qt_quartos": 1,
+ 		"qt_suites": 1,
+ 		"qt_sala_estar": 0,
+ 		"qt_sala_jantar": 1,
+ 		"vagas_garagem": 1,
+ 		"possui_armario": 0,
+ 		"andar": 12,
+ 		"valor_condominio": 250,
+ 		"possui_portaria": 1,
+	"descricao" : "Mas um imóvel no centro oeste do brasil"
+ 	},
+	"propietarios": ["05673201117"]
+}
+
+{
+ 	"area_metros": "100",
+ 	"status": "aluga-se",
+ 	"data_registro": "2020-09-24",
+ 	"rua": "Santa thereza",
+ 	"bairro": "Inez",
+ 	"numero": 574,
+ 	"cep": "11025555",
+ 	"cidade": "São Paulo",
+ 	"estado": "São Paulo",
+ 	"tipo": "comercial",
+ 	"imovel": {
+ 		"imovel_id": null,
+ 		"qt_banheiros": 1,
+ 		"qt_comodos": 2,
+		"descricao" : "Mas um imóvel no sudeste"
+ 	},
+	"propietarios": ["05673201117"]
+}
+
+{
+ 	"area_metros": "250",
+ 	"status": "vende-se",
+ 	"data_registro": "2020-09-24",
+ 	"rua": "Sem nome",
+ 	"bairro": "Um lugar desconhecido",
+ 	"numero": 0,
+ 	"cep": "",
+ 	"cidade": "Rio Branco",
+ 	"estado": "Acré",
+ 	"tipo": "terreno",
+ 	"imovel": {
+ 		"imovel_id": null,
+ 		"largura": 100,
+ 		"comprimento": 2,
+ 		"possui_aclive": 0,
+ 		"possui_declive" : 1,
+		"descricao" : "Terreno medio em outro mundo"
+ 	},
+	"propietarios": ["05673201119"]
+}
+
+---
+
+{
+ 	"area_metros": "100",
+ 	"status": "vende-se",
+ 	"data_registro": "2020-09-24",
+ 	"rua": "Fulado de beltrano",
+ 	"bairro": "Beltrano",
+ 	"numero": 1250,
+ 	"cep": "89045555",
+ 	"cidade": "Recife",
+ 	"estado": "Rio Grande",
+ 	"tipo": "casa",
+ 	"imovel": {
+ 		"imovel_id": null,
+ 		"qt_quartos": 1,
+ 		"qt_suites": 1,
+ 		"qt_sala_estar": 0,
+ 		"qt_sala_jantar": 1,
+ 		"vagas_garagem": 1,
+ 		"possui_armario": 0,
+ 		"descricao" : "Mas um imóvel no norte do brasil"
+ 	},
+	"propietarios": ["05673201117"]
+}
+
+{
+ 	"area_metros": "100",
+ 	"status": "vende-se",
+ 	"data_registro": "2020-09-24",
+ 	"rua": "Marechal dionisio",
+ 	"bairro": "Monte",
+ 	"numero": 682,
+ 	"cep": "79023123",
+ 	"cidade": "Florianopolis",
+ 	"estado": "Santa Catarina",
+ 	"tipo": "apartamento",
+ 	"imovel": {
+ 		"imovel_id": null,
+ 		"qt_quartos": 1,
+ 		"qt_suites": 1,
+ 		"qt_sala_estar": 0,
+ 		"qt_sala_jantar": 1,
+ 		"vagas_garagem": 1,
+ 		"possui_armario": 0,
+ 		"andar": 12,
+ 		"valor_condominio": 250,
+ 		"possui_portaria": 1,
+		"descricao" : "Mas um imóvel no sudeste do brasil"
+ 	},
+	"propietarios": ["05673201118"]
+}
+
+{
+ 	"area_metros": "100",
+ 	"status": "aluga-se",
+ 	"data_registro": "2020-09-24",
+ 	"rua": "jacinto ba",
+ 	"bairro": "tche",
+ 	"numero": 105,
+ 	"cep": "1111",
+ 	"cidade": "Paraiso",
+ 	"estado": "Mato Grosso do sul",
+ 	"tipo": "comercial",
+ 	"imovel": {
+ 		"imovel_id": null,
+ 		"qt_banheiros": 1,
+ 		"qt_comodos": 2,
+		"descricao" : "Salão"
+ 	},
+	"propietarios": ["05673201118"]
+}
+
+{
+ 	"area_metros": "250",
+ 	"status": "vende-se",
+ 	"data_registro": "2020-09-24",
+ 	"rua": "Belém de sá",
+ 	"bairro": "Caranguejal",
+ 	"numero": 0,
+ 	"cep": "81810555",
+ 	"cidade": "Belém",
+ 	"estado": "Pará",
+ 	"tipo": "terreno",
+ 	"imovel": {
+ 		"imovel_id": null,
+ 		"largura": 100,
+ 		"comprimento": 2,
+ 		"possui_aclive": 0,
+ 		"possui_declive" : 1,
+		"descricao" : "terreno"
+ 	},
+	"propietarios": ["05673201119"]
+}
+
+
+{
+ 	"area_metros": "250",
+ 	"status": "vende-se",
+ 	"data_registro": "2020-09-24",
+ 	"rua": "7 de setembro",
+ 	"bairro": "centro",
+ 	"numero": 0,
+ 	"cep": "79023001",
+ 	"cidade": "Campo Grande",
+ 	"estado": "Mato Grosso do sul",
+ 	"tipo": "terreno",
+ 	"imovel": {
+ 		"imovel_id": null,
+ 		"largura": 100,
+ 		"comprimento": 2,
+ 		"possui_aclive": 0,
+ 		"possui_declive" : 1,
+		"descricao" : "terreno"
+ 	},
+	"propietarios": ["05673201119"]
+}
+
+{
+ 	"area_metros": "100",
+ 	"status": "vende-se",
+ 	"data_registro": "2020-09-24",
+ 	"rua": "Fulado de beltrano",
+ 	"bairro": "Beltrano",
+ 	"numero": 1250,
+ 	"cep": "89045555",
+ 	"cidade": "Joao Pessoa",
+ 	"estado": "Pernanbuco",
+ 	"tipo": "casa",
+ 	"imovel": {
+ 		"imovel_id": null,
+ 		"qt_quartos": 1,
+ 		"qt_suites": 1,
+ 		"qt_sala_estar": 0,
+ 		"qt_sala_jantar": 1,
+ 		"vagas_garagem": 1,
+ 		"possui_armario": 0,
+ 		"descricao" : "Mas um imóvel norte do brasil"
+ 	},
+	"propietarios": ["05673201117"]
+}
+
+{
+ 	"area_metros": "100",
+ 	"status": "aluga-se",
+ 	"data_registro": "2020-09-24",
+ 	"rua": "Serjão berranteiro",
+ 	"bairro": "Uai",
+ 	"numero": 0,
+ 	"cep": "55093154",
+ 	"cidade": "Cuiabá",
+ 	"estado": "Mato Grosso",
+ 	"tipo": "casa",
+ 	"imovel": {
+ 		"imovel_id": null,
+ 		"qt_quartos": 1,
+ 		"qt_suites": 1,
+ 		"qt_sala_estar": 0,
+ 		"qt_sala_jantar": 1,
+ 		"vagas_garagem": 1,
+ 		"possui_armario": 0,
+ 		"descricao" : "Mas um imóvel no centro oeste do brasil"
+ 	},
+	"propietarios": ["05673201118"]
+}
+
+{
+ 	"area_metros": "100",
+ 	"status": "aluga-se",
+ 	"data_registro": "2020-09-24",
+ 	"rua": "Marechal teodoro",
+ 	"bairro": "Monte castelo",
+ 	"numero": 55,
+ 	"cep": "79023123",
+ 	"cidade": "Sinop",
+ 	"estado": "Mato Grosso",
+ 	"tipo": "apartamento",
+ 	"imovel": {
+ 		"imovel_id": null,
+ 		"qt_quartos": 1,
+ 		"qt_suites": 1,
+ 		"qt_sala_estar": 0,
+ 		"qt_sala_jantar": 1,
+ 		"vagas_garagem": 1,
+ 		"possui_armario": 0,
+ 		"andar": 12,
+ 		"valor_condominio": 250,
+ 		"possui_portaria": 1,
+		"descricao" : "Mas um imóvel no centro oeste do brasil"
+ 	},
+	"propietarios": ["05673201119"]
+}
+
+{
+ 	"area_metros": "100",
+ 	"status": "aluga-se",
+ 	"data_registro": "2020-09-24",
+ 	"rua": "Santa thereza",
+ 	"bairro": "Inez",
+ 	"numero": 574,
+ 	"cep": "11025555",
+ 	"cidade": "São Paulo",
+ 	"estado": "São Paulo",
+ 	"tipo": "comercial",
+ 	"imovel": {
+ 		"imovel_id": null,
+ 		"qt_banheiros": 1,
+ 		"qt_comodos": 2,
+		"descricao" : "Salão grande"
+ 	},
+	"propietarios": ["05673201117"]
+}
+
+{
+ 	"area_metros": "100",
+ 	"status": "aluga-se",
+ 	"data_registro": "2020-09-24",
+ 	"rua": "Inocencia",
+ 	"bairro": "Belo",
+ 	"numero": 1,
+ 	"cep": "11025555",
+ 	"cidade": "Belo Horizonte",
+ 	"estado": "Minas Gerais",
+ 	"tipo": "comercial",
+ 	"imovel": {
+ 		"imovel_id": null,
+ 		"qt_banheiros": 1,
+ 		"qt_comodos": 2,
+		"descricao" : "Salão grande"
+ 	},	
+	"propietarios": ["05673201117"]
+}
+
+
