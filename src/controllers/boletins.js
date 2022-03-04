@@ -3,8 +3,18 @@ const sql = require('./util/sql');
 const validator = require('./util/validators');
 
 async function buscarBoletimPeloId(req, res) {
-    const boletim = await db.find(sql.buscarBoletimPeloId + "" + req.params.id + ")");
-    return res.json(boletim);
+    try {
+
+        const boletim = await db.find(sql.buscarBoletimPeloId + "" + req.params.id + ")");
+        validator.existsOrError(boletim.rows, "Boletim com id " + req.params.id + " não encontrado!") ;
+        return res.json(boletim);
+        
+    } catch(err) {
+        return res.status(404).json({
+            status: "Não encontrado",
+            message: err
+        }); 
+    } 
 }
 
 async function buscarTodos(req, res) {
@@ -36,4 +46,30 @@ async function inserir(req, res) {
     }
 }
 
-module.exports = { buscarBoletimPeloId, buscarTodos, inserir }
+async function atualizar(req, res) {
+    try {
+
+        validator.existsOrError(req.body.aluno_id, "Dados incorretos!");
+        validator.existsOrError(req.body.disciplina_id, "Dados incorretos!");
+        validator.existsOrError(req.body.p1, "Dados incorretos!");
+        validator.existsOrError(req.body.p2, "Dados incorretos!");
+        validator.existsOrError(req.body.p3, "Dados incorretos!");
+        validator.existsOrError(req.body.p4, "Dados incorretos!");
+
+        await db.update(sql.atualizarBoletim + "p1 =" + req.body.p1 + ", p2 =" + req.body.p2 + ", p3 =" + req.params.p3 + ", p4" + req.params.p4, 
+        req.params.id);
+
+        return res.json({
+            status: 'sucesso',
+            msg: 'atualizado com sucesso!'
+        });
+
+    } catch(err) {
+        return res.status(400).json({
+            status: "Erro de validação",
+            message: err
+        });
+    }
+}
+
+module.exports = { buscarBoletimPeloId, buscarTodos, inserir, atualizar }

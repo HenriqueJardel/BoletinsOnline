@@ -38,6 +38,7 @@ app.post('/turmas', turmaController.inserir);
 app.put('/alunos/:id', alunoController.atualizar);
 app.put('/disciplinas/:id', disciplinaController.atualizar);
 app.put('/professores/:id', professorController.atualizar);
+app.put('/boletins/:id', boletimController.atualizar);
 
 app.delete('/alunos/:id', alunoController.deletar);
 app.delete('/disciplinas/:id', disciplinaController.deletar);

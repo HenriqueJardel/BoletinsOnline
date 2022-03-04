@@ -3,8 +3,18 @@ const sql = require('./util/sql');
 const validator = require('./util/validators');
 
 async function buscarDisciplinaPorId(req, res) {
-    const disciplina = await db.find(sql.buscarDisciplinaPeloId + "" + req.params.id);
-    return res.json(disciplina);
+    try {
+        
+        const disciplina = await db.find(sql.buscarDisciplinaPeloId + "" + req.params.id);
+        validator.existsOrError(disciplina.rows, "Disciplina com id " + req.params.id + " não encontrado!") ;
+        return res.json(disciplina);
+        
+    } catch(err) {
+        return res.status(404).json({
+            status: "Não encontrado",
+            message: err
+        });
+    } 
 }
 
 async function buscarTodos(req, res) {
@@ -35,7 +45,25 @@ async function inserir(req, res) {
 }
 
 async function atualizar(req, res) {
-    return res.json('Professor atualizar ' + req.params.id)
+    try {
+        
+        validator.existsOrError(req.body.codigo_disciplina, "Dados incorretos!");
+        validator.existsOrError(req.body.nome, "Dados incorretos!");
+        validator.existsOrError(req.body.professor_id,"Dados incorretos!");
+
+        db.update(sql.atualizarDisciplina + "codigo_disciplina =" + req.body.codigo_disciplina + ", nome =" + req.body.nome + ", " + req.body.professor_id);
+
+        return res.json({
+            status: 'sucesso',
+            msg: 'atualizado com sucesso!'
+        });
+
+    } catch(err) {
+        return res.status(400).json({
+            status: "Erro de validação",
+            message: err
+        });
+    }
 }
 
 async function deletar(req, res) {
