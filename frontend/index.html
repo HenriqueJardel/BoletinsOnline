@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Boletins online</title>
+    <link rel="stylesheet" href="./style.css"/>
+  </head>
+  <body>
+    <div class="root">
+       <nav class="nav">
+        <header>
+          <div class="text-center">
+              <p class="title">Boletins online</p>
+          </div>
+        </header>
+        <div class="menu-bar">
+          <ul class="menu-links">
+            <li class="nav-links">
+              <a href="/" onclick="route()" class="nav_link">Pagína Incial</a>
+            </li>
+            <li class="nav-links">
+              <a href="/alunos" onclick="route()" class="nav_link">Alunos</a>
+            </li>
+            <li class="nav-links">
+              <a href="/disciplinas" onclick="route()" class="nav_link">Disciplinas</a>
+            </li>
+            <li class="nav-links">
+              <a href="/professores" onclick="route()" class="nav_link">Professores</a>
+            </li>
+            <li class="nav-links">
+              <a href="/boletins" onclick="route()" class="nav_link">Boletins</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div id="main-page" class="main-page"></div>  
+    </div>
+    <script type="text/javascript" src="./js/index.js"></script>
+  </body>
+</html>

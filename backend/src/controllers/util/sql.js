@@ -21,7 +21,7 @@ module.exports = {
     inserirTurma: "INSERT INTO turma(ano_turma) VALUES ",
     deletarTurma: "DELETE FROM turma WHERE id = ",
 
-    buscarTodosBoletins: "SELECT * FROM (SELECT aluno, disciplina, media, (CASE WHEN media > 7 THEN 'Aprovado' WHEN media = 0 THEN 'Notas não inseridas' WHEN media < 7  THEN 'Reprovado' END) as situacao  from (SELECT AVG((ad.p1 + ad.p2 + ad.p3 + ad.p4)/4) AS media, a.nome as aluno, d.nome as disciplina  FROM aluno_disciplina ad JOIN aluno a ON ad.aluno_id = a.id JOIN disciplina d ON ad.disciplina_id = d.id))",
+    buscarTodosBoletins: "SELECT * FROM (SELECT *, (CASE WHEN media > 7 THEN 'Aprovado' WHEN media = 0 THEN 'Notas não inseridas' WHEN media < 7  THEN 'Reprovado' END) as situacao  from (SELECT AVG((ad.p1 + ad.p2 + ad.p3 + ad.p4)/4) AS media, a.nome as aluno, d.nome as disciplina, ad.p1, ad.p2, ad.p3, ad.p4 FROM aluno_disciplina ad JOIN aluno a ON ad.aluno_id = a.id JOIN disciplina d ON ad.disciplina_id = d.id))",
     buscarBoletimPeloId: "SELECT aluno, disciplina, media, (CASE WHEN media > 7 THEN 'Aprovado' WHEN media = 0 THEN 'Notas não inseridas' WHEN media < 7  THEN 'Reprovado' END) as situacao  from (SELECT AVG((ad.p1 + ad.p2 + ad.p3 + ad.p4)/4) AS media, a.nome as aluno, d.nome as disciplina  FROM aluno_disciplina ad JOIN aluno a ON ad.aluno_id = a.id JOIN disciplina d ON ad.disciplina_id = d.id WHERE ad.ID = ",
     inserirBoletim: "INSERT INTO aluno_disciplina(aluno_id, disciplina_id, p1, p2, p3, p4) VALUES ",
     atualizarBoletim: "UPDATE aluno_disciplina SET "
